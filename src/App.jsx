@@ -1,9 +1,10 @@
-import './App.css'
 import { TodoCounter } from './components/TodoCounter';
 import { TodoSearch } from './components/TodoSearch';
 import { TodoList } from './components/TodoList';
 import { TodoItem } from './components/TodoItem';
 import { TodoButton } from './components/TodoButton';
+import { Container } from './components/Container';
+import './index.css';
 
 const TODOS = [
   {todo: "Limpiar la casa", completed: false},
@@ -16,7 +17,7 @@ const TODOS = [
 function App() {
 
   return (
-    <>
+    <Container>
       <TodoCounter completed={5} total={9} />
       <TodoSearch />
 
@@ -29,7 +30,7 @@ function App() {
       </TodoList>
 
       <TodoButton />
-    </>
+    </Container>
   )
 }
 
