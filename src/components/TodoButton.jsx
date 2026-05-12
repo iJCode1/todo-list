@@ -28,7 +28,10 @@ const StyledButton = styled.button`
 
 function TodoButton() {
   return(
-    <StyledButton $deleteIcon={deleteIcon}>
+    <StyledButton 
+      $deleteIcon={deleteIcon}
+      onClick = {() => console.log("Le diste clic")}
+    >
       <img src={CrosIcon} alt="Cross Icon" />
     </StyledButton>
   )

@@ -13,6 +13,7 @@ const StyledContainer = styled.section`
   align-items: center;
   position: relative;
   min-block-size: 100vh;
+  padding-block-end: 4rem;
 `;
 
 function Container({children}){

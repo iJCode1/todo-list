@@ -14,9 +14,19 @@ const StyledInputSearch = styled.input`
   text-align: center;
 `
 
-function TodoSearch() {
+function TodoSearch({ searchValue, setSearchValue, setTodos, filterTodos }) {
   return(
-    <StyledInputSearch type="text" placeholder="Leer 10 páginas" name="search" />
+    <StyledInputSearch 
+      type="text" 
+      placeholder="Leer 10 páginas" 
+      name="search"
+      value={searchValue}
+      onChange={(e) => {
+        setSearchValue(e.target.value)
+        
+        setTodos(filterTodos);
+      }}  
+    />
   )
 }
 
